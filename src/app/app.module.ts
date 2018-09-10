@@ -1,18 +1,22 @@
+import { CoreModule } from './core/core.module';
+import { CommonModule } from '@angular/common';
+import { AppRouting } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { CesiumDirective } from './cesium.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CesiumDirective
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    AppRouting,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

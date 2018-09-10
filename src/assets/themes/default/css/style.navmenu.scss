@@ -1,0 +1,48 @@
+.navmenu {}
+
+.navmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+}
+
+.navmenu ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    float: left;
+    color: #007bff;
+}
+
+.navmenu ul li a {
+    display: block;
+    padding: 4px 8px;
+    min-width: 6em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navmenu ul li a i {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 2px auto;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.navmenu ul li a span {
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.navmenu ul li.active {
+    background-color: #007bff;
+    color: #fff;
+}

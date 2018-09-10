@@ -1,0 +1,35 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout .layout-header {}
+
+.layout .layout-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout .layout-container .layout-silder {
+    display: none;
+}
+
+.layout .layout-container .layout-wraper {
+    flex: 1;
+}
+
+.layout .layout-footer {}

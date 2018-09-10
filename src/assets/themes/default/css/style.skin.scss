@@ -1,0 +1,21 @@
+html,
+body,
+#cesiumContainer {}
+
+.layout-header {
+    height: 60px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.layout-silder {}
+
+.layout-wraper {}
+
+.layout-footer {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    background-color: #000;
+    color: #ddd;
+    font-size: 12px;
+}
