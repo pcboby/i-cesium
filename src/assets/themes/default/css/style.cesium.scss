@@ -3,3 +3,42 @@
     height: 100%;
     width: 100%;
 }
+
+.cesium-tools {
+    margin: 10px;
+}
+
+.cesium-tools ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.cesium-tools ul li {
+    padding: 5px;
+}
+
+.cesium-tools ul li a {
+    display: block;
+    background-color: rgba($color: #fff, $alpha: .2);
+    border: 1px solid transparent;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20pxp;
+    text-align: center;
+    color: #fff !important;
+    border-radius: 100%;
+}
+
+.cesium-tools ul li a:hover {
+    background: #48b;
+    border-color: #aef;
+    box-shadow: 0 0 8px #fff;
+    cursor: pointer;
+}
+
+.cesium-tools ul li a i {}
+
+.cesium-tools ul li a span {
+    display: none;
+}

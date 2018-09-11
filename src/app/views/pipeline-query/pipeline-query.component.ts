@@ -7,6 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipelineQueryComponent implements OnInit {
 
+  items = [{
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }];
+
   constructor() { }
 
   ngOnInit() {

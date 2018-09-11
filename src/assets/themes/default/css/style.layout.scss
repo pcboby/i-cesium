@@ -4,32 +4,53 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+
+not supported by any browser */
 }
 
-.layout {
+.layout-header {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
+    right: 0;
+    height: 60px;
 }
 
-.layout .layout-header {}
-
-.layout .layout-container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+.layout-container {
+    position: absolute;
+    top: 60px;
+    bottom: 28px;
+    left: 0;
+    right: 0;
 }
 
-.layout .layout-container .layout-silder {
+.layout-map-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+}
+
+.layout-container .layout-silder {
     display: none;
 }
 
-.layout .layout-container .layout-wraper {
-    flex: 1;
+.layout-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
 }
-
-.layout .layout-footer {}

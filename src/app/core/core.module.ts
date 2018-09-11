@@ -1,4 +1,3 @@
-import { CesiumDirective } from './directies';
 
 import {
   NgModule,
@@ -14,11 +13,30 @@ import {
 import {
   CommonModule
 } from '@angular/common';
-import { LayoutComponent, HeaderComponent, SilderComponent, WraperComponent, FooterComponent } from 'src/app/core/components';
+import {TooltipModule, ModalModule} from 'ngx-bootstrap';
+import {
+  LayoutComponent,
+  HeaderComponent,
+  SilderComponent,
+  WraperComponent,
+  FooterComponent,
+  LayoutMapComponent
+} from './components';
+import {
+  CesiumToolsComponent
+} from './components/cesium-tools/cesium-tools.component';
+import {
+  CesiumDirective
+} from './directies';
 
 
 const modules = [
   RouterModule, CommonModule
+];
+
+const bootstrapModules = [
+  TooltipModule.forRoot(),
+  ModalModule.forRoot()
 ];
 
 const directives = [
@@ -27,15 +45,18 @@ const directives = [
 
 const components = [
   LayoutComponent,
+  LayoutMapComponent,
   HeaderComponent,
   SilderComponent,
   WraperComponent,
-  FooterComponent
+  FooterComponent,
+  CesiumToolsComponent
 ];
 
 @NgModule({
   imports: [
-    ...modules
+    ...modules,
+    ...bootstrapModules
   ],
   declarations: [
     ...directives,

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-layer-control',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayerControlComponent implements OnInit {
 
-  constructor() { }
+  items = [{
+    title: '当前图层',
+    icon: 'fa fa-list',
+    click: function () {
+      alert(1);
+    }
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }, {
+    title: '当前图层',
+    icon: 'fa fa-list'
+  }];
 
-  ngOnInit() {
-  }
+  constructor() {}
+
+  ngOnInit() {}
 
 }

@@ -1,0 +1,10 @@
+<div class="cesium-tools">
+    <ul>
+        <li *ngFor="let item of items">
+            <a [tooltip]="item.title" placement="right" (click)="item.click()">
+                <i class="{{item.icon}}"></i>
+                <span>{{item.title}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

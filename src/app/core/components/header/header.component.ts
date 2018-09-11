@@ -16,35 +16,35 @@ export class HeaderComponent implements OnInit {
     icon: 'fa fa-desktop'
   }, {
     name: '图层控制',
-    link: '/layerControl',
+    link: '/map/layerControl',
     icon: 'fa fa-paper-plane'
   }, {
     name: '地图操作',
-    link: '/mapOperation',
+    link: '/map/mapOperation',
     icon: 'fa fa-map'
   }, {
     name: '地图定位',
-    link: '/mapPosition',
+    link: '/map/mapPosition',
     icon: 'fa fa-map-marker'
   }, {
     name: '管线查询',
-    link: '/pipelineQuery',
+    link: '/map/pipelineQuery',
     icon: 'fa fa-search'
   }, {
     name: '管线统计',
-    link: '/pipelineStatistics',
+    link: '/map/pipelineStatistics',
     icon: 'fa fa-ioxhost'
   }, {
     name: '综合分析',
-    link: '/comprehensiveAnalysis',
+    link: '/map/comprehensiveAnalysis',
     icon: 'fa fa-area-chart'
   }, {
     name: '房屋管理',
-    link: '/housingManagement',
+    link: '/map/housingManagement',
     icon: 'fa fa-home'
   }, {
     name: '打印出图',
-    link: '/mapPrint',
+    link: '/map/mapPrint',
     icon: 'fa fa-print'
   }, {
     name: '系统管理',

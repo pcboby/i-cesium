@@ -1,0 +1,10 @@
+.tooltip-inner {
+    background-color: rgba($color: #fff, $alpha: .2) !important;
+    color: #fff !important;
+    white-space: nowrap;
+}
+
+.tooltip .tooltip-arrow:before,
+.tooltip .tooltip-arrow {
+    border-right-color: rgba($color: #fff, $alpha: .2) !important;
+}

@@ -1,5 +1,5 @@
 import {
-  LayoutComponent
+  LayoutComponent, LayoutMapComponent
 } from './core/components';
 import {
   NgModule
@@ -37,67 +37,36 @@ const routes: Routes = [
     }]
   },
   {
-    path: 'layerControl', // 图层控制
-    component: LayoutComponent,
+    path: 'map',
+    component: LayoutMapComponent,
     children: [{
       path: '',
+      redirectTo: 'layerControl',
+      pathMatch: 'full'
+    }, {
+      path: 'layerControl', // 图层控制
       loadChildren: './views/layer-control/layer-control.module#LayerControlModule'
-    }]
-  },
-  {
-    path: 'mapOperation', // 地图操作
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'mapOperation', // 地图操作
       loadChildren: './views/map-operation/map-operation.module#MapOperationModule'
-    }]
-  },
-  {
-    path: 'mapPosition', // 地图定位
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'mapPosition', // 地图定位
       loadChildren: './views/map-position/map-position.module#MapPositionModule'
-    }]
-  },
-  {
-    path: 'pipelineQuery', // 管线查询
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'pipelineQuery', // 管线查询
       loadChildren: './views/pipeline-query/pipeline-query.module#PipelineQueryModule'
-    }]
-  },
-  {
-    path: 'pipelineStatistics', // 管线统计
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'pipelineStatistics', // 管线统计
       loadChildren: './views/pipeline-statistics/pipeline-statistics.module#PipelineStatisticsModule'
-    }]
-  },
-  {
-    path: 'comprehensiveAnalysis', // 综合分析
-    component: LayoutComponent,
-    children: [{
-      path: '',
-      loadChildren: './views/comprehensive-analysis/comprehensive-analysis.module#ComprehensiveAnalysisModule'
-    }]
-  },
-  {
-    path: 'housingManagement', // 房屋管理
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'housingManagement', // 房屋管理
       loadChildren: './views/housing-management/housing-management.module#HousingManagementModule'
-    }]
-  },
-  {
-    path: 'mapPrint', // 打印出图
-    component: LayoutComponent,
-    children: [{
-      path: '',
+    }, {
+      path: 'mapPrint', // 打印出图
       loadChildren: './views/map-print/map-print.module#MapPrintModule'
+    }, {
+      path: 'comprehensiveAnalysis', // 综合分析
+      loadChildren: './views/comprehensive-analysis/comprehensive-analysis.module#ComprehensiveAnalysisModule'
     }]
   },
   {
