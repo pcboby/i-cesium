@@ -13,7 +13,13 @@ import {
 import {
   CommonModule
 } from '@angular/common';
-import {TooltipModule, ModalModule} from 'ngx-bootstrap';
+import {
+  TooltipModule,
+  ModalModule
+} from 'ngx-bootstrap';
+import {
+  TreeviewModule
+} from 'ngx-treeview';
 import {
   LayoutComponent,
   HeaderComponent,
@@ -36,7 +42,8 @@ const modules = [
 
 const bootstrapModules = [
   TooltipModule.forRoot(),
-  ModalModule.forRoot()
+  ModalModule.forRoot(),
+  TreeviewModule.forRoot()
 ];
 
 const directives = [

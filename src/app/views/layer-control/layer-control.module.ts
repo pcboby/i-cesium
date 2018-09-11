@@ -15,11 +15,13 @@ import {
   LayerControlComponent
 } from './layer-control.component';
 import {
-  TempComponent
+  TempComponent,
+  LayerComponent
 } from './components';
 // 子集弹窗
-const modalComponents = [
-  TempComponent
+const dialogComponents = [
+  TempComponent,
+  LayerComponent, // 当前图层
 ];
 @NgModule({
   imports: [
@@ -30,10 +32,10 @@ const modalComponents = [
   ],
   declarations: [
     LayerControlComponent,
-    ...modalComponents
+    ...dialogComponents
   ],
   entryComponents: [
-    ...modalComponents
+    ...dialogComponents
   ]
 })
 export class LayerControlModule {}

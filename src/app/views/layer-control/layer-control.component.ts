@@ -1,4 +1,7 @@
 import {
+  LayerComponent
+} from './components/layer/layer.component';
+import {
   Component,
   OnInit
 } from '@angular/core';
@@ -20,7 +23,7 @@ export class LayerControlComponent implements OnInit {
   items = [{
     title: '当前图层',
     icon: 'fa fa-list',
-    click: () => {}
+    click: () => this.openLayer()
   }, {
     title: '当前图层',
     icon: 'fa fa-list',
@@ -39,7 +42,7 @@ export class LayerControlComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   ngOnInit() {}
-
+  // 临时
   openTempDialog() {
     const initialState = {
       list: [
@@ -57,5 +60,8 @@ export class LayerControlComponent implements OnInit {
     });
     this.bsModalRef.content.closeBtnName = 'Close';
   }
-
+  // 当前图层
+  openLayer() {
+    this.bsModalRef = this.modalService.show(LayerComponent);
+  }
 }
