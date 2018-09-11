@@ -2,6 +2,13 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import {
+  BsModalRef,
+  BsModalService
+} from 'ngx-bootstrap';
+import {
+  TempComponent
+} from './components';
 
 @Component({
   selector: 'app-layer-control',
@@ -13,19 +20,42 @@ export class LayerControlComponent implements OnInit {
   items = [{
     title: '当前图层',
     icon: 'fa fa-list',
-    click: function () {
-      alert(1);
-    }
+    click: () => {}
   }, {
     title: '当前图层',
-    icon: 'fa fa-list'
+    icon: 'fa fa-list',
+    click: () => {}
   }, {
     title: '当前图层',
-    icon: 'fa fa-list'
+    icon: 'fa fa-list',
+    click: () => {}
+  }, {
+    title: 'temp',
+    icon: 'fa fa-list',
+    click: () => this.openTempDialog()
   }];
 
-  constructor() {}
+  bsModalRef: BsModalRef;
+  constructor(private modalService: BsModalService) {}
 
   ngOnInit() {}
+
+  openTempDialog() {
+    const initialState = {
+      list: [
+        'Open a modal with component',
+        'Pass your data',
+        'Do something else',
+        '...'
+      ],
+      title: 'Modal with component'
+    };
+    this.bsModalRef = this.modalService.show(TempComponent, {
+      initialState,
+      backdrop: true,
+      ignoreBackdropClick: false
+    });
+    this.bsModalRef.content.closeBtnName = 'Close';
+  }
 
 }

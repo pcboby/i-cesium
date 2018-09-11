@@ -14,7 +14,13 @@ import {
 import {
   LayerControlComponent
 } from './layer-control.component';
-
+import {
+  TempComponent
+} from './components';
+// 子集弹窗
+const modalComponents = [
+  TempComponent
+];
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +29,11 @@ import {
 
   ],
   declarations: [
-    LayerControlComponent
+    LayerControlComponent,
+    ...modalComponents
+  ],
+  entryComponents: [
+    ...modalComponents
   ]
 })
 export class LayerControlModule {}
